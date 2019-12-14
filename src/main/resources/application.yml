@@ -44,16 +44,23 @@ spring:
 #          url-pattern: /druid/*
 #          login-username: jieshi
 #          login-password: jieshii333
-#  activemq:
-#    broker-url: tcp://qa-int.xiaozipu.cn:8631
-#    user: jscloud-pi
-#    password: DSZ@^am@s9A7H7g
-#    pool:
-#      enabled: true
-#      max-connections: 50
-#      expiry-timeout: 10000
-#      idle-timeout: 30000
-#
+  activemq:
+#    指定ActiveMQ broker的URL，默认自动生成
+    broker-url: tcp://139.224.62.94:61616
+#    指定broker的用户
+    user: admin
+#    指定broker的密码
+    password: admin
+    pool:
+#      是否使用PooledConnectionFactory
+      enabled: true
+#      最大连接数
+      max-connections: 50
+#      空闲时间
+      idle-timeout: 30000
+#     连接超时时间
+#      expiry-timeout: 0
+
 ##分页配置
 #pagehelper:
 #  helperDialect: mysql
